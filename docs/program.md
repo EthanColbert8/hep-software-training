@@ -20,15 +20,29 @@ In this session, we will discuss:
 3. Collaborating on software projects: git branches, forks, and tags.
 
 ## 3. The Purdue Analysis Facility
-The [Analysis Facility (AF)](https://analysis-facility.physics.purdue.edu/en/latest/) at Purdue has become one of our most-used platforms for developing and running projects. In this session, we will discuss:
+The [Analysis Facility (AF)](https://analysis-facility.physics.purdue.edu/en/latest/) at Purdue has become one of our most-used platforms for developing and running projects.
+In this session, we will discuss:
 
 1. What the AF is, and what happens when you start up an AF server.
 2. Managing Python environments on the AF.
 3. Overview of the resources available on the AF.
 
 ## 4. HPC Clusters and Batch Jobs
-Workflows at very large scale are not run interactively, but submitted to large clusters to run in parallel across many, many CPU cores. In this session, we will discuss:
+Workflows at very large scale are not run interactively, but submitted to large clusters to run in parallel across _many_ CPU cores. In this session, we will discuss:
 
 1. What a _batch scheduler_ is and how they are used to distribute work on large clusters.
 2. What a typical batch workflow looks like, in the context of SLURM (and HTCondor?).
-3. The cluster resources available at Purdue (and possibly also lxplus at CERN).
+3. Connecting to clusters via SSH: SSH keys and configs.
+4. The cluster resources available at Purdue (and possibly also lxplus at CERN).
+
+## 5. ROOT
+[ROOT](https://root.cern.ch/doc/v636/) is a framework developed by and for HEP scientists doing particle physics analysis.
+It is a **very** large library that includes everything and the kitchen sink: four-vector calculations, matrix operations, large dataset handling, statistical fitting, even simplistic MC generation ([`TGenPhaseSpace`](https://root.cern.ch/doc/v636/classTGenPhaseSpace.html)).
+As a result, ROOT is very powerful, albeit perhaps less convenient for beginners.
+Even outside of ROOT itself, the system ROOT built for serializing (saving) data to files in a compressed, yet easily readable, way is extremely useful, and widely used in HEP even without the ROOT library.
+In this session, we will discuss:
+
+1. ROOT files: capabilities and accessing with [Uproot](https://uproot.readthedocs.io/en/latest/).
+2. The basics of the ROOT CLI and library.
+3. What a ROOT workflow looks like.
+4. Using [PyROOT](https://root.cern/manual/python/) to access ROOT functionality in a Python program.
